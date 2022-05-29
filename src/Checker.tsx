@@ -35,7 +35,7 @@ export default class Checker extends React.Component {
     const { value } = e.target
     const { solutions } = this.state
 
-    const proposedSolutionPresent = solutions.includes(value)
+    const proposedSolutionPresent = solutions.includes(value.toLowerCase())
 
     this.setState({
       proposedSolutionPresent
@@ -53,7 +53,7 @@ export default class Checker extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state
+    const { isLoading, proposedSolutionPresent } = this.state
     const labelText = this.getLabelText()
 
     if (isLoading) {
@@ -61,6 +61,8 @@ export default class Checker extends React.Component {
         <div>Loading...</div>
       )
     }
+
+    const inputColor = proposedSolutionPresent ? "success" : "danger"
 
     return (
       <div>
@@ -72,6 +74,7 @@ export default class Checker extends React.Component {
               placeholder="Enter your solution here"
               maxLength={5}
               onChange={this.handleChange.bind(this)}
+              color={inputColor}
             />
           </Control>
         </Field>
