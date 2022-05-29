@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jpteti.com/wordle-solution-checker/",
+  "homepage": "https://wordlechecker.jpteti.com",
   "eslintConfig": {
     "extends": [
       "react-app",

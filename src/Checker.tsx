@@ -10,6 +10,7 @@ export default class Checker extends React.Component {
 
     return {
       solutions,
+      inputLength: 0,
       isLoading: true,
       proposedSolutionPresent: false
     }
@@ -36,9 +37,11 @@ export default class Checker extends React.Component {
     const { solutions } = this.state
 
     const proposedSolutionPresent = solutions.includes(value.toLowerCase())
+    const inputLength = value.length
 
     this.setState({
-      proposedSolutionPresent
+      proposedSolutionPresent,
+      inputLength
     })
   }
 
@@ -52,8 +55,22 @@ export default class Checker extends React.Component {
     }
   }
 
+  getInputColor() {
+    const { proposedSolutionPresent, inputLength } = this.state
+
+    if (inputLength < 5) {
+      return "default"
+    }
+
+    if (proposedSolutionPresent) {
+      return "success"
+    } else {
+      return "danger"
+    }
+  }
+
   render() {
-    const { isLoading, proposedSolutionPresent } = this.state
+    const { isLoading } = this.state
     const labelText = this.getLabelText()
 
     if (isLoading) {
@@ -62,7 +79,7 @@ export default class Checker extends React.Component {
       )
     }
 
-    const inputColor = proposedSolutionPresent ? "success" : "danger"
+    const inputColor = this.getInputColor()
 
     return (
       <div>
