@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wordle-solution-checker/static/css/main.d7d1c66a.css",
+    "main.js": "/wordle-solution-checker/static/js/main.f4a5c6df.js",
+    "static/js/787.9d37afc9.chunk.js": "/wordle-solution-checker/static/js/787.9d37afc9.chunk.js",
+    "index.html": "/wordle-solution-checker/index.html",
+    "main.d7d1c66a.css.map": "/wordle-solution-checker/static/css/main.d7d1c66a.css.map",
+    "main.f4a5c6df.js.map": "/wordle-solution-checker/static/js/main.f4a5c6df.js.map",
+    "787.9d37afc9.chunk.js.map": "/wordle-solution-checker/static/js/787.9d37afc9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7d1c66a.css",
+    "static/js/main.f4a5c6df.js"
+  ]
+}
